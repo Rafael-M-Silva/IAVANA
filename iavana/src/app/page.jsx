@@ -1,8 +1,44 @@
 import CardService from "@/components/CardService";
 import Header from "@/components/Header";
+import Link from 'next/link'
+import Image from "next/image";
+import ImgProject from "../img/img.jpg"
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 export default function Home() {
- 
+ const projects = [
+  {
+  id: 1,
+  slug: "projeto1",
+  img: ImgProject
+  },
+  {
+  id: 2,
+  slug: "projeto2",
+  img: ImgProject
+  },
+  {
+  id: 3,
+  slug: "projeto3",
+  img: ImgProject
+  },
+  {
+  id: 4,
+  slug: "projeto4",
+  img: ImgProject
+  },
+  {
+  id: 5,
+  slug: "projeto5",
+  img: ImgProject
+  },
+  {
+  id: 6,
+  slug: "projeto6",
+  img: ImgProject
+  },
+
+]
   
   return (
     <>
@@ -38,6 +74,80 @@ export default function Home() {
           <h2 className="text-6xl font-semibold max-w-[291px]">PLANT HARVEST GROW</h2>
           <p className="max-w-[658px] text-xl font-light">With over a decade of experience, IAVANA is a dynamic and collaborative Brand Studio that works end-to-end across creative processes — from design, illustration, and copywriting to web design. We craft projects that reflect the true essence of each brand’s purpose, combining aesthetics, strategic thinking, and uniqueness.</p>
         </div>
+      </section>
+      <section id="projects" className="py-10 w-6xl m-auto">
+        <div className="cards flex justify-between flex-wrap gap-7">
+          {projects.map((project) => (
+            <Link key={project.id} href={`/project/${project.slug}`}><Image className="rounded-[45px] h-[392px] object-cover bg-amber-300" src={project.img} width={365} height={392} alt="img"/></Link>
+          ))}
+        </div>
+      </section>
+      <section id="contact" >
+          <InfiniteMovingCards items={[{
+    quote: "teste1",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste2",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste3",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },
+  {
+    quote: "teste4",
+    name: "teste",
+    title: "teste"
+  },]} direction="left" speed="slow"/>
       </section>
     </>
   );
