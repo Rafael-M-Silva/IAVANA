@@ -82,8 +82,8 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="contact" >
-          <InfiniteMovingCards items={[{
+      <section id="contact" className="py-10">
+          <InfiniteMovingCards items={[{        
     quote: "teste1",
     name: "teste",
     title: "teste"
@@ -148,6 +148,10 @@ export default function Home() {
     name: "teste",
     title: "teste"
   },]} direction="left" speed="slow"/>
+        <div className="w-6xl m-auto mt-20 flex gap-8 justify-center items-end pb-10">
+          <h2 className="font-semibold text-6xl">CREATING WITH</h2>
+          <Image className="mb-1" src="./logo.svg" width={208} height={69} alt="logo"/>
+        </div>
       </section>
     </>
   );
