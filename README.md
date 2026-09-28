@@ -2,7 +2,7 @@
 
 Protótipo de landing page para uma marca de estúdio criativo, desenvolvido com Next.js.
 
-**Demonstração informada no repositório:** [iavana.vercel.app](https://iavana.vercel.app)
+**Status do deploy:** a homepage registrada no GitHub retornou 404 em 28/09/2026; por isso a URL não é apresentada como demonstração ativa.
 
 ## Estado do projeto
 
